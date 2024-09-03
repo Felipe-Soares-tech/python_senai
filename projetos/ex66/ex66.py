@@ -7,6 +7,9 @@
 import operations as op
 #lista:
 nomes = [ 'Neymar', 'Mesi', 'Cris', 'Mbappe']
+from os import system
+
+system('cls')
 
 
 
@@ -41,16 +44,13 @@ while operacao == 'sim':
 
             case 3:
                 posicao2 = int(input('digite a posição do numero que voce quer excluir!: '))
-                op.excluir(posicao2)
+                op.excluir(posicao2-1)
                 print(op.enum())
-
             case 4:
                 print(op.enum())
-            
             case _:
                 print('ERRO')
                 ask = int(input('selecione um numero: '))
-
         operacao = input('Deseja realizar outra ação? ').strip().lower()
 
         if operacao == 'não':
@@ -61,6 +61,7 @@ while operacao == 'sim':
             print(f'\033[0;31;40m ERRO!Palavra inválida! \033[m')
             operacao = input('Deseja realizar outra ação? "sim" ou "não" ').strip().lower()
         
+
 
 
 # 1 or ask != 2 or ask != 3 or ask != 4

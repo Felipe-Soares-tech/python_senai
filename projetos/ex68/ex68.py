@@ -5,8 +5,25 @@
 # Ao listar todos os alunos mostre cada um de forma organizada e separada.
 # Crie uma funcionalidade de mostre os dados de um aluno especifico usando apenas de sua matricula para isso.
 
-nomes = [{'nome' : 'felipe', 
+# cadastros = {'nome' : 'sim',}
+# print(cadastros)
+
+# cadastros['nome'] = 'felipe'
+# print(cadastros)
 
 
 
+
+nomes = [{
+    'nome': '',
+    'email' : '',
+    'nascimento' : '',
+    'matricula' : '',
 }]
+for i in nomes:
+    print(i)
+    
+subs_nome = input('')
+
+
+

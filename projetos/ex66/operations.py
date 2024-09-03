@@ -1,5 +1,7 @@
 nomes = [ 'Neymar', 'Mesi', 'Cris', 'Mbappe']
 
+posicao2 = int()
+
 #def para enumerar a lista de a
 def enum():
     for enumeracao, names in enumerate(nomes, start=1 ):
