@@ -2,7 +2,7 @@
 
 numero = int(input('digite um numero: '))
 
-for num in range(numero,0, -1):
+for num in range(numero, 0, 1):
     print(num)
 
 
