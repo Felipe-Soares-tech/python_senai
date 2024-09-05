@@ -23,6 +23,10 @@ while operacao == 'sim':
         print(op.enum())
         ask = int(input('selecione um numero: '))
 
+        if ask == str():
+            print('ERRO!')
+            ask = int(input('selecione um numero: '))
+
 
         while ask > 4 or ask < 0:
             print('ERRO!')
