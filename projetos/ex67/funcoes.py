@@ -41,6 +41,53 @@ def vitoria():
     else:
         return False
 
+def victory():
+    tabuleiro = [0,1,2,3,4,5,6,7,8]
+
+    combincoes_vitoria = [
+        (0,1,2), (3,4,5), (6,7,8),
+        (0,3,6), (1,4,7), (2,5,8),
+        (0,4,8), (2,4,6)
+    ]
+    for a,b,c in combincoes_vitoria:
+        if tabuleiro[a] == tabuleiro[b] == tabuleiro[c]:
+            return True
+
+
+def victory2():
+    tabuleiro = [0,1,2,3,4,5,6,7,8]
+
+    combincoes_vitoria = [
+        (0,1,2), (3,4,5), (6,7,8),
+        (0,3,6), (1,4,7), (2,5,8),
+        (0,4,8), (2,4,6)
+       
+    ]
+    resposta = any(return True if tabuleiro[a] == tabuleiro[b] == tabuleiro[c] for a,b,c in combincoes_vitoria )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
