@@ -21,50 +21,54 @@ while operacao == 'sim':
         
         print(op.hud())
         print(op.enum())
-        ask = int(input('selecione um numero: '))
+        # ask = int(input('selecione um numero: '))
 
-        if ask == str():
-            print('ERRO!')
-            ask = int(input('selecione um numero: '))
-
-
-        while ask > 4 or ask < 0:
-            print('ERRO!')
-            ask = int(input('selecione um numero: '))
-
-        match ask:
-        
-
-            case 1:
-                cadastro = input('digite um nome: ').strip().capitalize()
-                op.add(cadastro)
-                print(op.enum())
-                
-            case 2:
-                posicao = int(input('digite a posição do numero que voce quer tirar: '))
-                novo_nome = input('diga o novo nome: ').strip().capitalize()
-                op.subs(posicao,novo_nome)
-                print(op.enum())
-
-            case 3:
-                posicao2 = int(input('digite a posição do numero que voce quer excluir!: '))
-                op.excluir(posicao2-1)
-                print(op.enum())
-            case 4:
-                print(op.enum())
-            case _:
-                print('ERRO')
+        while True:
+            try:
                 ask = int(input('selecione um numero: '))
-        operacao = input('Deseja realizar outra ação? ').strip().lower()
+            except ValueError:
+                print('erro')
+                ask = int(input('selecione um numero: '))
 
-        if operacao == 'não':
-            print('ok')
-            break
+                while ask > 4 or ask < 0:
+                    print('ERRO!')
 
-        while operacao != 'sim' and operacao!= 'não':
-            print(f'\033[0;31;40m ERRO!Palavra inválida! \033[m')
-            operacao = input('Deseja realizar outra ação? "sim" ou "não" ').strip().lower()
-        
+                
+                    
+
+                match ask:
+                        
+                    case 1:
+                        cadastro = input('digite um nome: ').strip().capitalize()
+                        op.add(cadastro)
+                        print(op.enum())
+                        
+
+                    case 2:
+                        posicao = int(input('digite a posição do numero que voce quer tirar: '))
+                        novo_nome = input('diga o novo nome: ').strip().capitalize()
+                        op.subs(posicao,novo_nome)
+                        print(op.enum())
+
+                    case 3:
+                        posicao2 = int(input('digite a posição do numero que voce quer excluir!: '))
+                        op.excluir(posicao2-1)
+                        print(op.enum())
+                    case 4:
+                        print(op.enum())
+                    case _:
+                        print('ERRO')
+                        ask = int(input('selecione um numero: '))
+                operacao = input('Deseja realizar outra ação? ').strip().lower()
+
+                if operacao == 'não':
+                    print('ok')
+                    break
+
+                while operacao != 'sim' and operacao!= 'não' and operacao!= 'nao':
+                    print(f'\033[0;31;40m ERRO!Palavra inválida! \033[m')
+                    operacao = input('Deseja realizar outra ação? "sim" ou "não" ').strip().lower()
+                
 
 
 
