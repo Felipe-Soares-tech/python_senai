@@ -4,7 +4,7 @@
 |-|-|
 | git init | inicia o monitoramento do projeto |
 | git branch -M main | renomeia a branch principal | 
-| git add <arquivo> | manda os arquivos para a area de staging |
+| git add (arquivo) ou '.' | manda os arquivos para a area de staging |
 | git status | verifica o estado dos arquivos | 
 | git config --global user.name 'nome' | configura o usuario git |
 | git config --global user.email 'email' | configura o email do usuario git
